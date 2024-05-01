@@ -109,3 +109,10 @@ nav ul li a {
     border-radius: 15px;
 }
 
+.featured-title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #fff;
+}
+
