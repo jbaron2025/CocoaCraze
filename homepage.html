@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>COCOACRAZE - Homepage</title>
+  <link rel="stylesheet" href="homepage.css">
+  <script src="homepage.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+      <div class="navbar">
+        <img src ="CocoaCrazeNoBackground.png" alt="CocoaCraze Logo" class="logo">
+        <nav>
+          <ul>
+            <li><a href="https://50519aaa-333d-4b7d-ab6a-a9aae9900bf9-00-1y6e33w0u9sxy.picard.replit.dev/product.html">Store</a></li>
+            <li><a href="https://50519aaa-333d-4b7d-ab6a-a9aae9900bf9-00-1y6e33w0u9sxy.picard.replit.dev/Aboutus.html">About Us</a></li>
+          </ul>
+        </nav>
+      </div>    
+  </header>
+  <div class="featured">
+      <button class="slide-arrow prev-arrow" onclick="moveSlide(-1)">&#10094;</button>
+      <div class="featured-container">
+          <div class="chocolate-slide">
+              <img src="chuncky.jpg" alt="Chocolate 1" style="width:100%" class="featured-chocolate">
+          </div>
+          <div class="chocolate-slide">
+              <img src="hazelnut.jpg" alt="Chocolate 2" style="width:100%" class="featured-chocolate">
+          </div>
+          <div class="chocolate-slide">
+              <img src="flowerchocolate.jpg" alt="Chocolate 3" style="width:100%" class="featured-chocolate">
+          </div>
+      </div>
+      <button class="slide-arrow next-arrow" onclick="moveSlide(1)">&#10095;</button>
+  </div>
+</body>
+</html>  
