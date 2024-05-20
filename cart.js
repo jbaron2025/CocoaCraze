@@ -1,69 +1,42 @@
-var cart = {};
-var menu = [
-    { id: "aaa", name: "PlainJane", price: 5 }
-];
-
-// Checks if id is valid
-function checkValid(ident) {
-    for (let i = 0; i < menu.length; i++) {
-        if (menu[i].id == ident) return true;
-    }
-    return false;
+// Function to remove a specific item from the cart
+function removeItemFromCart(index) {
+    const selectedItems = JSON.parse(localStorage.getItem("selectedItems"));
+    selectedItems.splice(index, 1); // Remove the item at the specified index
+    localStorage.setItem("selectedItems", JSON.stringify(selectedItems));
+    renderCart();
 }
 
-// Gets item from valid id
-function getItem(ident) {
-    for (let i = 0; i < menu.length; i++) {
-        if (menu[i].id == ident) return menu[i];
-    }
-    return null;
+// Function to clear the entire cart
+function clearCart() {
+    localStorage.removeItem("selectedItems");
+    renderCart();
 }
 
-// Function to add item to cart
-function addItemToCart(ident, itemQuantity) {
-    if (cart[ident]) {
-        cart[ident].quantity += 1;
-    } else {
-        var item = getItem(ident);
-        cart[ident] = item;
-        cart[ident].quantity = itemQuantity;
-    }
-    console.log('Item added to cart:', item);
-    console.log('Current cart:', cart);
-    displayCartItems();
-    displayTotalPrice();
+// Function to render the cart items
+function renderCart() {
+    const cartItemsContainer = document.getElementById("cart-items-container");
+    cartItemsContainer.innerHTML = ""; // Clear previous items
+
+    const selectedItems = JSON.parse(localStorage.getItem("selectedItems")) || [];
+    let totalPrice = 0;
+
+    selectedItems.forEach((item, index) => {
+        const itemElement = document.createElement("div");
+        itemElement.innerHTML = `
+                    <div>
+                        <h3>${item.name}</h3>
+                        <p>Price: $${item.price}</p>
+                        <button onclick="removeItemFromCart(${index})">Remove Item</button>
+                    </div>
+                `;
+        cartItemsContainer.appendChild(itemElement);
+        totalPrice += item.price;
+    });
+
+    // Update total price display
+    const totalPriceElement = document.getElementById("total-price");
+    totalPriceElement.textContent = totalPrice.toFixed(2);
 }
 
-// Function to display cart items
-function displayCartItems() {
-    var cartItemsDiv = document.getElementById('cartItems');
-    cartItemsDiv.innerHTML = '';
-    for (var itemId in cart) {
-        var item = cart[itemId];
-        var itemDiv = document.createElement('div');
-        itemDiv.textContent = 'Item: ' + item.name + ' - Price: $' + item.price + ' - Quantity: ' + item.quantity;
-        cartItemsDiv.appendChild(itemDiv);
-    }
-}
-
-// Function to display total price
-function displayTotalPrice() {
-    var totalPriceDiv = document.getElementById('totalPrice');
-    var totalPrice = 0;
-    for (var itemId in cart) {
-        var item = cart[itemId];
-        totalPrice += item.price * item.quantity;
-    }
-    totalPriceDiv.textContent = 'Total Price: $' + totalPrice.toFixed(2);
-}
-
-// Event listener for button
-document.getElementById('addToCartBtn').addEventListener('click', function () {
-    var itemId = prompt("Enter the item ID:");
-    var itemQuantity = prompt("Enter Quantity:");
-    if (checkValid(itemId)) {
-        addItemToCart(itemId, itemQuantity);
-    } else {
-        alert("Invalid input. Please enter valid information.");
-    }
-});
+// Render the initial cart items
+renderCart();
