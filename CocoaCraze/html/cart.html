@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to Cart</title>
+    <link rel="stylesheet" href="../css/cart.css">
+</head>
+<header>
+    <a href="../index.html"><img src="https://i.ibb.co/72B0PqL/Cocoa-Craze-No-Background.png" alt="CocoaCraze Logo" class="logo"></a>
+    <ul class = "navbar">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../html/product.html" class="store-stay-active">Store</a></li>
+        <li><a href="../html/aboutus.html">About Us</a></li>
+        <li><a href="../html/faq.html">FAQ</a></li>
+        <li><a href="../html/feedback.html">Review Us!</a></li>
+    </ul>
+    <a href="../html/cart.html"><img src="https://i.ibb.co/7YXgxH9/shopping-cart.png" class="menu-icon"></a>
+</header>
+<body>
+    <section class="container">
+        <h1>Cart</h1>
+        <select id="productDropdown"></select>
+        <input type="number" id="productQuantity" min="1" placeholder="Enter Quantity">
+        <button id="addToCartBtn">Add Item to Cart</button>
+        
+        <div id="cartItems"></div>
+        <div id="totalPrice" class="total"></div>
+    </section>
+
+    <script src="../js/cart.js"></script>
+</body>
+</html>
