@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin-top: 150px;
+    padding: 0;
+    background-color: #8b4513; 
+    color: #8b4513; 
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #8b4513;
+    box-shadow: 0 8px 11px rgb(14 55 54 / 15%);
+    padding: 20px 100px;
+    transition: 0.5s;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    column-gap: 0.5rem;
+    padding-right: 10%;
+}
+
+.navbar li {
+    margin: 0 0.5rem;
+}
+
+.navbar a {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+}
+
+.navbar a:hover, .navbar .home-stay-active {
+    background: black;
+    border-radius: 5rem;
+    transition: background 0.5s;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    width: 115px;
+}
+
+.menu-icon {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+}
+
+.menu-icon img {
+    object-fit: cover;
+    object-position: center;
+}
+
+section {
+    padding: 4.5rem 0 1.5rem;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    min-height: 640px;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+.container img {
+    width: 400px;
+    position: absolute;
+    top: 0%;
+    right: 200px;
+    border-radius: 25px;
+}
+
+.home-text {
+    padding: 150px 150px;
+}
+
+.home-text span {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: sandybrown;
+}
+
+.home-text h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.shop-btn {
+    padding: 0.6rem 1rem;
+    background: black;
+    color: white;
+    font-weight: 400;
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 0.5rem;
+    max-width: 160px;
+}
+
+.shop-btn:hover {
+    background: sandybrown;
+    transition: 0.2s ease;
+}
+
+.swiper-button-next {
+    background: url(https://i.ibb.co/DW3DHsj/right-arrow-circle.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    margin-right: 20px;
+}
+
+.swiper-button-next:after {
+    display: none;
+}
+
+.swiper-button-prev {
+    background: url(https://i.ibb.co/LCKmVGF/left-arrow-circle.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    margin-right: 20px;
+}
+
+.swiper-button-prev:after {
+    display: none;
+}
+
+
+
+
+
+
+
+
+/*
+.featured {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    position: relative;
+    background: sandybrown;
+}
+
+.slide-container {
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.featured-item {
+    display: none;
+    transition: 0.5s ease-in-out;
+}
+
+.featured-item img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.slide-arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next-arrow {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev-arrow {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.slide-arrow:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.featured-chocolate {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.featured-title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #fff;
+}
+*/
+
