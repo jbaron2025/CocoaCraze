@@ -1,0 +1,1 @@
+Welcome to CocoaCraze, your ultimate destination for the finest chocolates! Our website offers a wide variety of high-quality chocolates, sourced from the best cocoa beans around the world. Whether you're looking for dark, milk, white, or artisan chocolates, CocoaCraze has something to satisfy every chocolate lover's cravings.
